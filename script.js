@@ -19,7 +19,15 @@ menuButton.addEventListener("click", () => {
 
 navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (event.key !== "Escape" || menuButton.getAttribute("aria-expanded") !== "true") return;
+  closeMenu();
+  menuButton.focus();
+});
+
+document.addEventListener("pointerdown", (event) => {
+  if (menuButton.getAttribute("aria-expanded") !== "true") return;
+  if (header.contains(event.target)) return;
+  closeMenu();
 });
 
 window.addEventListener("resize", () => {
@@ -42,7 +50,10 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     navLinks.forEach((link) => {
-      link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+      const isActive = link.getAttribute("href") === `#${entry.target.id}`;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
     });
   });
 }, { rootMargin: "-28% 0px -62% 0px" });
