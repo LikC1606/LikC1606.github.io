@@ -264,7 +264,7 @@ button:focus-visible {
   max-width: 1080px;
   padding: 22px 24px 22px 20px;
   border-left: 4px solid var(--accent);
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 2px 2px 0;
   background: #f1f0eb;
 }
 
@@ -332,7 +332,7 @@ button:focus-visible {
   display: block;
   width: 100%;
   height: clamp(330px, 43vw, 592px);
-  border-radius: 18px;
+  border-radius: 2px;
   object-fit: cover;
   object-position: center 48%;
 }
@@ -375,8 +375,24 @@ button:focus-visible {
 
 .section-header .section-label { padding-top: 8px; }
 
+.section-label[data-index] {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: baseline;
+}
+
+.section-label[data-index]::before {
+  color: var(--muted);
+  content: attr(data-index);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .section-header .section-label::after {
   display: block;
+  grid-column: 2;
   width: 36px;
   height: 1px;
   margin-top: 12px;
@@ -610,6 +626,7 @@ button:focus-visible {
 }
 
 .contact-section .section-label { color: #e38a6d; }
+.contact-section .section-label::before { color: #807d77; }
 .contact-section h2 { margin: 0; font-size: 46px; font-weight: 550; line-height: 1.15; }
 .contact-section div > p { max-width: 640px; margin: 20px 0 32px; color: #cbc7bf; font-family: var(--serif); font-size: 19px; }
 .contact-section div > a { font-size: 20px; font-weight: 650; overflow-wrap: anywhere; }
@@ -738,7 +755,7 @@ button:focus-visible {
   .hero-foot span:nth-child(2) { display: none; }
 
   .campus-feature { margin-top: 28px; margin-bottom: 58px; }
-  .campus-feature img { height: clamp(230px, 70vw, 420px); border-radius: 12px; }
+  .campus-feature img { height: clamp(230px, 70vw, 420px); border-radius: 2px; }
   .campus-feature figcaption { align-items: flex-start; }
 
   .page-section { padding-top: 72px; padding-bottom: 76px; }
