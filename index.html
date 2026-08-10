@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Zhenhao Liu is an undergraduate researcher in Artificial Intelligence at Westlake University, interested in NLP, research agents, and AI for science.">
-  <meta name="theme-color" content="#f1f3ef">
+  <meta name="theme-color" content="#080c0b">
   <meta property="og:title" content="Zhenhao Liu | Undergraduate Researcher">
   <meta property="og:description" content="Undergraduate researcher at Westlake University interested in NLP, research agents, and AI for science.">
   <meta property="og:type" content="profile">
@@ -34,15 +34,19 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
 
   <header class="site-header" data-header>
-    <a class="wordmark" href="#top" aria-label="Zhenhao Liu, home">
-      <span class="wordmark-mark" aria-hidden="true">ZL</span>
-      <span class="wordmark-copy">
-        <strong>Zhenhao Liu</strong>
-        <small>Academic profile</small>
-      </span>
+    <a class="brand" href="#top" aria-label="Zhenhao Liu, home">
+      <span class="brand-code" aria-hidden="true">[ ZL ]</span>
+      <span class="brand-name">Zhenhao Liu</span>
     </a>
+
+    <div class="system-readout" title="Local time in Hangzhou">
+      <span class="status-light" aria-hidden="true"></span>
+      <span>HANGZHOU / UTC+8</span>
+      <time data-clock>--:--:--</time>
+    </div>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
       <span></span><span></span>
@@ -57,167 +61,176 @@
   </header>
 
   <main id="main">
-    <section class="masthead" id="top" aria-labelledby="page-title">
-      <div class="masthead-index" aria-hidden="true">
-        <span>PROFILE</span>
-        <span>2026</span>
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <canvas class="signal-field" data-signal-field aria-hidden="true"></canvas>
+      <div class="hero-guides" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="hero-rail" aria-hidden="true">
+        <span>IDENTITY NODE</span>
+        <strong>001</strong>
+        <span>ONLINE / 2026</span>
       </div>
 
-      <div class="masthead-copy">
-        <p class="eyebrow">Undergraduate researcher &middot; Hangzhou, China</p>
-        <h1 id="page-title">Zhenhao <em>Liu</em></h1>
-        <p class="lead">Exploring language-centered AI systems that help people reason with evidence, develop research ideas, and make scientific work more traceable.</p>
-        <div class="masthead-links">
-          <a class="action-link" href="mailto:liuzhenhao@westlake.edu.cn">Start a conversation <span aria-hidden="true">&rarr;</span></a>
-          <a class="quiet-link" href="https://github.com/LikC1606">GitHub <span aria-hidden="true">&nearr;</span></a>
+      <div class="hero-copy">
+        <p class="kicker"><span aria-hidden="true">&gt;_</span> Undergraduate researcher</p>
+        <h1 id="page-title">Zhenhao<br><span>Liu</span></h1>
+        <p class="hero-lead">Exploring language-centered AI systems for evidence, scientific reasoning, and research workflows.</p>
+        <div class="hero-actions">
+          <a class="command-link" href="mailto:liuzhenhao@westlake.edu.cn"><span aria-hidden="true">01</span> Initiate contact <b aria-hidden="true">&rarr;</b></a>
+          <a class="ghost-link" href="https://github.com/LikC1606">GitHub <span aria-hidden="true">&nearr;</span></a>
         </div>
       </div>
 
-      <aside class="profile-aside" aria-label="Academic identity">
-        <figure class="portrait">
-          <div class="portrait-frame">
-            <img src="assets/zhenhao-liu.jpg" alt="Profile image used by Zhenhao Liu" width="460" height="460">
-          </div>
-          <figcaption>
-            <span>Portrait / 01</span>
-            <span>LikC1606</span>
-          </figcaption>
+      <aside class="identity-module" aria-label="Academic identity">
+        <div class="module-header"><span>ID / ZL-1606</span><span>ACADEMIC PROFILE</span></div>
+        <figure class="tech-portrait">
+          <span class="corner corner-tl" aria-hidden="true"></span>
+          <span class="corner corner-tr" aria-hidden="true"></span>
+          <span class="corner corner-bl" aria-hidden="true"></span>
+          <span class="corner corner-br" aria-hidden="true"></span>
+          <img src="assets/zhenhao-liu.jpg" alt="Profile image used by Zhenhao Liu" width="460" height="460">
+          <figcaption><span>VISUAL ID</span><span>LIK C1606</span></figcaption>
         </figure>
-
-        <dl class="credential-list">
-          <div>
-            <dt>Institution</dt>
-            <dd><a href="https://en.westlake.edu.cn/">Westlake University</a></dd>
-          </div>
-          <div>
-            <dt>Laboratory</dt>
-            <dd><a href="https://westlakenlp.com/">Westlake NLP Lab</a></dd>
-          </div>
-          <div>
-            <dt>Advisor</dt>
-            <dd><a href="https://en.westlake.edu.cn/faculty/nlp/yue-zhang.html">Prof. Yue Zhang</a></dd>
-          </div>
+        <dl class="identity-data">
+          <div><dt>Institution</dt><dd><a href="https://en.westlake.edu.cn/">Westlake University</a></dd></div>
+          <div><dt>Laboratory</dt><dd><a href="https://westlakenlp.com/">Westlake NLP Lab</a></dd></div>
+          <div><dt>Advisor</dt><dd><a href="https://en.westlake.edu.cn/faculty/nlp/yue-zhang.html">Prof. Yue Zhang</a></dd></div>
         </dl>
       </aside>
 
-      <a class="scroll-cue" href="#profile">Explore profile <span aria-hidden="true">&darr;</span></a>
+      <dl class="hero-meta">
+        <div><dt>Focus</dt><dd>NLP / Agents / AI4Science</dd></div>
+        <div><dt>Program</dt><dd>Artificial Intelligence</dd></div>
+        <div><dt>Base</dt><dd>Hangzhou, China</dd></div>
+      </dl>
+
+      <a class="scroll-cue" href="#profile"><span>Scroll to decode</span><i aria-hidden="true"></i></a>
     </section>
 
-    <section class="profile-section page-section" id="profile" aria-labelledby="profile-title">
-      <header class="section-header">
-        <p class="section-number">01</p>
-        <div>
-          <p class="section-label">Profile</p>
-          <h2 id="profile-title">About me</h2>
-        </div>
+    <section class="profile-section section-shell" id="profile" aria-labelledby="profile-title">
+      <header class="section-heading">
+        <p class="section-code">01 // PROFILE</p>
+        <h2 id="profile-title">A research profile built around <span>clear evidence.</span></h2>
+        <p class="heading-note">IDENTITY / CONTEXT / INTENT</p>
       </header>
 
-      <div class="profile-content">
+      <div class="profile-layout">
         <p class="profile-statement">I am an undergraduate student in Artificial Intelligence at Westlake University, working with the Westlake NLP Lab under the guidance of Prof. Yue Zhang.</p>
-        <div class="profile-notes">
-          <p>My interests lie at the intersection of natural language processing, research agents, and AI for science. I care about systems that do more than produce an answer: they should preserve where evidence came from, what remains uncertain, and how a conclusion was reached.</p>
-          <dl class="compact-facts">
-            <div><dt>Program</dt><dd>Artificial Intelligence</dd></div>
-            <div><dt>Cohort</dt><dd>Class of 2024</dd></div>
-            <div><dt>Focus</dt><dd>NLP &middot; Agents &middot; AI4Science</dd></div>
+        <div class="profile-detail">
+          <p>My interests lie at the intersection of natural language processing, research agents, and AI for science. I care about systems that preserve provenance, uncertainty, and the path from evidence to conclusion.</p>
+          <dl class="data-table">
+            <div><dt>Academic program</dt><dd>Artificial Intelligence</dd><span>01</span></div>
+            <div><dt>Entry cohort</dt><dd>Class of 2024</dd><span>02</span></div>
+            <div><dt>Research context</dt><dd>Westlake NLP Lab</dd><span>03</span></div>
           </dl>
         </div>
       </div>
     </section>
 
-    <section class="research-section page-section" id="research" aria-labelledby="research-title">
-      <header class="section-header">
-        <p class="section-number">02</p>
-        <div>
-          <p class="section-label">Research</p>
-          <h2 id="research-title">Questions I care about</h2>
-        </div>
+    <section class="research-section section-shell" id="research" aria-labelledby="research-title">
+      <header class="section-heading">
+        <p class="section-code">02 // RESEARCH</p>
+        <h2 id="research-title">Three questions on the <span>research horizon.</span></h2>
+        <p class="heading-note">AGENTS / DISCOVERY / EVIDENCE</p>
       </header>
 
-      <ol class="research-list">
+      <ol class="research-grid">
         <li>
-          <p class="research-code">R / 01</p>
-          <div class="research-copy">
+          <div class="research-id"><span>R.01</span><i aria-hidden="true"></i></div>
+          <div class="research-body">
+            <p class="research-tag">AGENT SYSTEMS</p>
             <h3>Research agents</h3>
             <p>How can language-model agents search, synthesize, and act on evidence while keeping the process open to inspection?</p>
           </div>
-          <span class="research-keyword">Agency</span>
+          <span class="axis" aria-hidden="true">X / 01</span>
         </li>
         <li>
-          <p class="research-code">R / 02</p>
-          <div class="research-copy">
+          <div class="research-id"><span>R.02</span><i aria-hidden="true"></i></div>
+          <div class="research-body">
+            <p class="research-tag">SCIENTIFIC DISCOVERY</p>
             <h3>AI for science</h3>
             <p>How can AI help researchers move from literature and observations toward useful hypotheses and experiments?</p>
           </div>
-          <span class="research-keyword">Discovery</span>
+          <span class="axis" aria-hidden="true">Y / 02</span>
         </li>
         <li>
-          <p class="research-code">R / 03</p>
-          <div class="research-copy">
+          <div class="research-id"><span>R.03</span><i aria-hidden="true"></i></div>
+          <div class="research-body">
+            <p class="research-tag">LANGUAGE + EVIDENCE</p>
             <h3>Evidence-grounded NLP</h3>
             <p>How should language systems represent provenance, uncertainty, and feedback throughout a research workflow?</p>
           </div>
-          <span class="research-keyword">Evidence</span>
+          <span class="axis" aria-hidden="true">Z / 03</span>
         </li>
       </ol>
     </section>
 
-    <section class="honors-section page-section" id="honors" aria-labelledby="honors-title">
-      <header class="section-header">
-        <p class="section-number">03</p>
-        <div>
-          <p class="section-label">Selected honors</p>
-          <h2 id="honors-title">Competitive programming</h2>
-        </div>
+    <section class="honors-section section-shell" id="honors" aria-labelledby="honors-title">
+      <header class="section-heading">
+        <p class="section-code">03 // HONORS</p>
+        <h2 id="honors-title">Competitive programming <span>record.</span></h2>
+        <p class="heading-note">ICPC / CCPC / 2025-2026</p>
       </header>
 
-      <div class="honors-intro">
-        <p>Competitive programming shaped my approach to difficult problems: identify the structure, test assumptions, and build precise solutions under constraints.</p>
-        <p class="honors-count"><strong>04</strong><span>regional and continental medals</span></p>
+      <div class="honors-summary">
+        <p>Competitive programming shaped how I approach difficult problems: identify structure, test assumptions, and build precise solutions under constraints.</p>
+        <dl>
+          <div><dt>Gold</dt><dd>02</dd></div>
+          <div><dt>Silver</dt><dd>02</dd></div>
+          <div><dt>Total</dt><dd>04</dd></div>
+        </dl>
       </div>
 
-      <ol class="honors-table">
-        <li class="honor-row">
+      <div class="honors-head" aria-hidden="true"><span>Year</span><span>Competition / Site</span><span>Result</span><span>Record</span></div>
+      <ol class="honors-list">
+        <li>
           <time datetime="2026">2026</time>
           <div><p>ICPC</p><h3>Asia East Continent Final</h3></div>
-          <span class="medal medal-silver">Silver</span>
-          <a href="https://cpcfinder.com/contest/77" aria-label="Source for 2026 ICPC Asia East Continent Final result">View source <span aria-hidden="true">&nearr;</span></a>
+          <span class="medal medal-silver"><i aria-hidden="true"></i>Silver</span>
+          <a href="https://cpcfinder.com/contest/77" aria-label="Source for 2026 ICPC Asia East Continent Final result">Source <span aria-hidden="true">&nearr;</span></a>
         </li>
-        <li class="honor-row">
+        <li>
           <time datetime="2025">2025</time>
           <div><p>ICPC</p><h3>Asia Xi'an Regional</h3></div>
-          <span class="medal medal-gold">Gold</span>
-          <a href="https://cpcfinder.com/contest/66" aria-label="Source for 2025 ICPC Asia Xi'an Regional result">View source <span aria-hidden="true">&nearr;</span></a>
+          <span class="medal medal-gold"><i aria-hidden="true"></i>Gold</span>
+          <a href="https://cpcfinder.com/contest/66" aria-label="Source for 2025 ICPC Asia Xi'an Regional result">Source <span aria-hidden="true">&nearr;</span></a>
         </li>
-        <li class="honor-row">
+        <li>
           <time datetime="2025">2025</time>
           <div><p>CCPC</p><h3>Zhengzhou Site</h3></div>
-          <span class="medal medal-gold">Gold</span>
-          <a href="https://cpcfinder.com/school/3801cd6e-5462-43ea-b737-4fcb86a35c77" aria-label="Source for 2025 CCPC Zhengzhou Site result">View source <span aria-hidden="true">&nearr;</span></a>
+          <span class="medal medal-gold"><i aria-hidden="true"></i>Gold</span>
+          <a href="https://cpcfinder.com/school/3801cd6e-5462-43ea-b737-4fcb86a35c77" aria-label="Source for 2025 CCPC Zhengzhou Site result">Source <span aria-hidden="true">&nearr;</span></a>
         </li>
-        <li class="honor-row">
+        <li>
           <time datetime="2025">2025</time>
           <div><p>ICPC</p><h3>Asia Shenyang Regional</h3></div>
-          <span class="medal medal-silver">Silver</span>
-          <a href="https://board.xcpcio.com/icpc/50th/shenyang" aria-label="Source for 2025 ICPC Asia Shenyang Regional result">View source <span aria-hidden="true">&nearr;</span></a>
+          <span class="medal medal-silver"><i aria-hidden="true"></i>Silver</span>
+          <a href="https://board.xcpcio.com/icpc/50th/shenyang" aria-label="Source for 2025 ICPC Asia Shenyang Regional result">Source <span aria-hidden="true">&nearr;</span></a>
         </li>
       </ol>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-index"><span>04</span><span>Contact</span></div>
-      <div class="contact-copy">
-        <p class="section-label">Get in touch</p>
-        <h2 id="contact-title">Open to thoughtful conversations about research and ideas.</h2>
-        <a href="mailto:liuzhenhao@westlake.edu.cn">liuzhenhao@westlake.edu.cn <span aria-hidden="true">&rarr;</span></a>
+      <div class="contact-signal" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="section-code">04 // CONTACT CHANNEL</p>
+      <div class="contact-layout">
+        <div>
+          <p class="contact-status"><i aria-hidden="true"></i> Channel open</p>
+          <h2 id="contact-title">Let us exchange<br><span>research ideas.</span></h2>
+        </div>
+        <div class="contact-action">
+          <p>For conversations around NLP, research agents, AI for science, and evidence-grounded workflows.</p>
+          <a href="mailto:liuzhenhao@westlake.edu.cn">liuzhenhao@westlake.edu.cn <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <p><span>SYS.ID</span> ZL-1606</p>
     <p>&copy; <span data-year>2026</span> Zhenhao Liu</p>
-    <p>Westlake University &middot; Hangzhou</p>
-    <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    <p>Westlake University / Hangzhou</p>
+    <a href="#top">Return to origin <span aria-hidden="true">&uarr;</span></a>
   </footer>
 
   <script src="script.js" defer></script>
