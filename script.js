@@ -48,5 +48,26 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: "-28% 0px -62% 0px" });
 
 sections.forEach((section) => observer.observe(section));
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealItems = [...document.querySelectorAll(
+  ".hero-copy, .academic-byline, .campus-feature, .section-header, .section-content, .contact-section",
+)];
+
+if (!prefersReducedMotion && "IntersectionObserver" in window) {
+  revealItems.forEach((item) => item.classList.add("reveal-item"));
+  document.documentElement.classList.add("reveal-enabled");
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
+
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 updateScroll();
