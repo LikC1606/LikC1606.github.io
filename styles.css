@@ -34,6 +34,8 @@ body {
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -458,16 +460,36 @@ button:focus-visible {
   line-height: 1.55;
 }
 
-.honors-intro > p:last-child {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+.medal-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
+  min-width: 280px;
   margin: 0;
-  font-size: 13px;
+  border-top: 1px solid var(--ink);
 }
 
-.honors-intro strong { color: var(--accent); font-size: 18px; }
-.honors-intro span { color: var(--muted); }
+.medal-summary div {
+  min-height: 86px;
+  padding: 14px 18px 4px 0;
+}
+
+.medal-summary div + div {
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+
+.medal-summary dt {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.medal-summary dd {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
 
 .honors-list li {
   display: grid;
@@ -528,7 +550,7 @@ button:focus-visible {
 .contact-section .section-label { color: #e38a6d; }
 .contact-section h2 { margin: 0; font-size: 46px; font-weight: 550; line-height: 1.15; }
 .contact-section div > p { max-width: 640px; margin: 20px 0 32px; color: #cbc7bf; font-family: var(--serif); font-size: 19px; }
-.contact-section div > a { font-size: 16px; font-weight: 700; overflow-wrap: anywhere; }
+.contact-section div > a { font-size: 20px; font-weight: 650; overflow-wrap: anywhere; }
 .contact-section div > a:hover { color: #e38a6d; }
 
 .site-footer {
@@ -649,7 +671,7 @@ button:focus-visible {
   .research-list h3 { font-size: 24px; }
 
   .honors-intro > p:first-child { font-size: 20px; }
-  .honors-intro > p:last-child { flex-wrap: wrap; }
+  .medal-summary { width: 100%; min-width: 0; }
 
   .honors-list li {
     grid-template-columns: 48px minmax(0, 1fr) 66px;
@@ -662,7 +684,7 @@ button:focus-visible {
 
   .contact-section { grid-template-columns: 1fr; gap: 30px; padding-top: 76px; padding-bottom: 76px; }
   .contact-section h2 { font-size: 36px; }
-  .contact-section div > a { font-size: 14px; }
+  .contact-section div > a { font-size: 16px; }
 
   .site-footer { grid-template-columns: 1fr auto; }
   .site-footer p:nth-child(2) { display: none; }
