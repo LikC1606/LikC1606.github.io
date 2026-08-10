@@ -124,7 +124,7 @@ const drawField = (move = true) => {
       const distance = Math.hypot(node.x - other.x, node.y - other.y);
       if (distance >= maxDistance) continue;
       const opacity = (1 - distance / maxDistance) * 0.22;
-      context.strokeStyle = `rgba(102, 217, 209, ${opacity})`;
+      context.strokeStyle = `rgba(189, 93, 61, ${opacity})`;
       context.lineWidth = 0.65;
       context.beginPath();
       context.moveTo(node.x, node.y);
@@ -133,9 +133,9 @@ const drawField = (move = true) => {
     }
 
     const colors = {
-      cyan: "rgba(102, 217, 209, 0.72)",
-      green: "rgba(168, 217, 95, 0.82)",
-      red: "rgba(255, 102, 87, 0.82)"
+      cyan: "rgba(29, 28, 26, 0.52)",
+      green: "rgba(102, 123, 108, 0.64)",
+      red: "rgba(217, 119, 87, 0.76)"
     };
     context.fillStyle = colors[node.accent];
     context.fillRect(node.x - 1, node.y - 1, 2, 2);
