@@ -138,10 +138,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 62px;
-  min-height: calc(100svh - var(--header-height) - 46px);
-  padding-top: 92px;
-  padding-bottom: 34px;
+  gap: 44px;
+  min-height: auto;
+  padding-top: 72px;
+  padding-bottom: 30px;
 }
 
 .eyebrow,
@@ -201,7 +201,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   grid-template-columns: 96px minmax(320px, 1fr) 240px;
   gap: 26px;
   align-items: center;
-  max-width: 920px;
+  max-width: 1080px;
   padding: 22px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -251,8 +251,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-foot a { justify-self: end; }
 
 .page-section {
-  padding-top: 134px;
-  padding-bottom: 134px;
+  padding-top: 96px;
+  padding-bottom: 100px;
   border-top: 1px solid var(--line);
   scroll-margin-top: var(--header-height);
 }
@@ -266,7 +266,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .section-header {
-  margin-bottom: 76px;
+  margin-bottom: 50px;
 }
 
 .section-header h2 {
@@ -278,7 +278,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   letter-spacing: 0;
 }
 
-.section-content { margin-left: 24%; }
+.section-content { margin-left: 16%; }
 
 .about-content {
   display: grid;
@@ -329,12 +329,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   list-style: none;
 }
 
-.research-list { max-width: 880px; }
-
-.research-list li {
-  padding: 34px 0 38px;
+.research-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: none;
   border-bottom: 1px solid var(--line);
 }
+
+.research-list li {
+  min-height: 218px;
+  padding: 30px 30px 34px;
+}
+
+.research-list li:first-child { padding-left: 0; }
+.research-list li + li { border-left: 1px solid var(--line); }
 
 .research-list h3 {
   margin: 0;
@@ -343,7 +351,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .research-list p {
-  max-width: 640px;
+  max-width: 360px;
   margin: 10px 0 0;
   color: #3e3c39;
   font-family: var(--serif);
@@ -423,9 +431,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   gap: 54px;
   width: 100%;
   max-width: none;
-  padding-top: 108px;
+  padding-top: 82px;
   padding-right: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
-  padding-bottom: 108px;
+  padding-bottom: 82px;
   padding-left: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
   background: var(--ink);
   color: var(--paper);
@@ -452,10 +460,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer a { justify-self: end; }
 
 @media (max-width: 940px) {
-  .hero { gap: 56px; }
+  .hero { gap: 44px; }
   .hero h1 { font-size: 64px; }
-  .section-content { margin-left: 14%; }
+  .section-content { margin-left: 8%; }
   .about-content { grid-template-columns: 1fr; gap: 48px; }
+  .research-list { grid-template-columns: 1fr; }
+  .research-list li { min-height: auto; padding: 28px 0 31px; border-bottom: 1px solid var(--line); }
+  .research-list li + li { border-left: 0; }
+  .research-list p { max-width: 640px; }
 }
 
 @media (max-width: 840px) {
@@ -482,8 +494,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 52px;
-    padding-top: 58px;
+    gap: 42px;
+    padding-top: 48px;
   }
 
   .hero h1 { font-size: 58px; }
@@ -498,9 +510,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   .hero {
     min-height: auto;
-    gap: 48px;
-    padding-top: 54px;
-    padding-bottom: 38px;
+    gap: 40px;
+    padding-top: 42px;
+    padding-bottom: 30px;
   }
 
   .hero h1 { font-size: 50px; }
@@ -521,8 +533,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-foot { grid-template-columns: 1fr auto; }
   .hero-foot span:nth-child(2) { display: none; }
 
-  .page-section { padding-top: 94px; padding-bottom: 94px; }
-  .section-header { margin-bottom: 52px; }
+  .page-section { padding-top: 72px; padding-bottom: 76px; }
+  .section-header { margin-bottom: 38px; }
   .section-header h2 { font-size: 40px; }
   .section-content { margin-left: 0; }
   .about-statement { font-size: 26px; }
