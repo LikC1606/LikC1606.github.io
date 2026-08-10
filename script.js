@@ -3,7 +3,6 @@ const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = [...document.querySelectorAll("main section[id]:not(#top)")];
-const progress = document.querySelector("[data-progress]");
 
 const closeMenu = () => {
   menuButton.setAttribute("aria-expanded", "false");
@@ -29,8 +28,6 @@ window.addEventListener("resize", () => {
 
 let ticking = false;
 const updateScroll = () => {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = `${scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) * 100 : 0}%`;
   header.classList.toggle("is-scrolled", window.scrollY > 18);
   ticking = false;
 };
