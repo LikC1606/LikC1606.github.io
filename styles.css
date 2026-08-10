@@ -183,6 +183,19 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  width: 30px;
+  height: 1px;
+  content: "";
+  background: currentColor;
+}
+
 .hero h1 {
   max-width: 900px;
   margin: 22px 0 0;
@@ -298,6 +311,17 @@ button:focus-visible {
 
 .hero-foot a { justify-self: end; }
 
+.hero-foot > span::before {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 9px;
+  border-radius: 50%;
+  content: "";
+  background: var(--accent);
+  vertical-align: 2px;
+}
+
 .campus-feature {
   width: min(100%, var(--content-max));
   margin: 42px auto 86px;
@@ -320,6 +344,11 @@ button:focus-visible {
   padding-top: 12px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.campus-feature figcaption strong {
+  color: var(--ink);
+  font-weight: 650;
 }
 
 .page-section {
@@ -421,20 +450,31 @@ button:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: none;
   border-bottom: 1px solid var(--line);
+  counter-reset: research-index;
 }
 
 .research-list li {
+  position: relative;
   min-height: 218px;
   padding: 30px 30px 34px;
+  counter-increment: research-index;
 }
 
 .research-list li:first-child { padding-left: 0; }
 .research-list li + li { border-left: 1px solid var(--line); }
 
 .research-list h3 {
-  margin: 0;
+  margin: 30px 0 0;
   font-size: 27px;
   font-weight: 590;
+}
+
+.research-list li::before {
+  color: var(--accent);
+  content: "0" counter(research-index);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .research-list p {
@@ -516,7 +556,11 @@ button:focus-visible {
   padding: 20px 16px 20px 0;
   border-bottom: 1px solid var(--line);
   vertical-align: middle;
+  transition: background-color 180ms ease;
 }
+
+.honors-table tbody tr:hover td { background: #f3f1ec; }
+.honors-table tbody tr:hover td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 
 .honors-table time,
 .honors-table td > p,
@@ -731,6 +775,8 @@ button:focus-visible {
     border-bottom: 1px solid var(--line);
   }
   .honors-table td { height: auto; padding: 0; border: 0; }
+  .honors-table tbody tr:hover td { background: transparent; }
+  .honors-table tbody tr:hover td:first-child { box-shadow: none; }
   .honors-table td:last-child { grid-column: 2 / 4; }
   .honors-table h3 { font-size: 18px; }
 
