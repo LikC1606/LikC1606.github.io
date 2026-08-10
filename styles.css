@@ -66,6 +66,20 @@ button:focus-visible {
 
 .skip-link:focus { transform: translateY(0); }
 
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 100ms linear;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -82,7 +96,7 @@ button:focus-visible {
   transition: box-shadow 180ms ease;
 }
 
-.site-header.is-scrolled { box-shadow: 0 1px 0 rgba(20, 20, 19, 0.16); }
+.site-header.is-scrolled { box-shadow: 0 1px 0 rgba(20, 20, 19, 0.12); }
 
 .brand {
   display: flex;

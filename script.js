@@ -1,4 +1,5 @@
 const header = document.querySelector("[data-header]");
+const readingProgress = document.querySelector("[data-reading-progress]");
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
@@ -32,11 +33,15 @@ document.addEventListener("pointerdown", (event) => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 840) closeMenu();
+  updateScroll();
 });
 
 let ticking = false;
 const updateScroll = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 18);
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+  readingProgress.style.transform = `scaleX(${Math.min(1, Math.max(0, progress / 100))})`;
   ticking = false;
 };
 
