@@ -65,6 +65,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   margin: 0 auto;
   padding: 0 var(--page-pad);
   background: rgba(250, 249, 245, 0.94);
+  backdrop-filter: blur(14px);
   transition: box-shadow 180ms ease;
 }
 
@@ -159,6 +160,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 620;
   line-height: 0.98;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .hero-lead {
@@ -202,9 +204,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   gap: 26px;
   align-items: center;
   max-width: 1080px;
-  padding: 22px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 22px 24px 22px 20px;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  background: #f1f0eb;
 }
 
 .byline-copy p {
@@ -223,7 +226,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .university-logo {
   display: block;
   padding: 12px 10px;
-  border-left: 1px solid var(--line);
+  border-left: 1px solid #d4d1ca;
 }
 
 .university-logo img {
@@ -266,12 +269,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .section-header {
+  display: grid;
+  grid-template-columns: 16% minmax(0, 1fr);
+  align-items: start;
   margin-bottom: 50px;
 }
 
+.section-header .section-label { padding-top: 8px; }
+
 .section-header h2 {
   max-width: 880px;
-  margin: 12px 0 0;
+  margin: 0;
   font-size: 52px;
   font-weight: 570;
   line-height: 1.1;
@@ -288,6 +296,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .about-statement {
   margin: 0;
+  padding-left: 26px;
+  border-left: 3px solid var(--accent);
   font-family: var(--serif);
   font-size: 30px;
   line-height: 1.48;
@@ -437,6 +447,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding-left: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
   background: var(--ink);
   color: var(--paper);
+  box-shadow: inset 0 3px 0 var(--accent);
   scroll-margin-top: var(--header-height);
 }
 
@@ -500,6 +511,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   .hero h1 { font-size: 58px; }
   .hero-lead { font-size: 23px; }
+  .academic-byline { grid-template-columns: 84px minmax(220px, 1fr) 200px; gap: 20px; padding: 18px; }
+  .portrait img { width: 84px; }
   .honors-intro { grid-template-columns: 1fr; gap: 30px; }
 }
 
@@ -524,7 +537,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     grid-template-columns: 84px minmax(0, 1fr);
     gap: 18px;
     align-items: start;
-    padding: 18px 0;
+    padding: 18px;
   }
 
   .portrait img { width: 84px; border-radius: 10px; }
@@ -534,7 +547,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-foot span:nth-child(2) { display: none; }
 
   .page-section { padding-top: 72px; padding-bottom: 76px; }
-  .section-header { margin-bottom: 38px; }
+  .section-header { grid-template-columns: 1fr; gap: 10px; margin-bottom: 38px; }
+  .section-header .section-label { padding-top: 0; }
   .section-header h2 { font-size: 40px; }
   .section-content { margin-left: 0; }
   .about-statement { font-size: 26px; }
