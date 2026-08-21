@@ -7,6 +7,10 @@ The site is a dependency-free static page built with HTML, CSS, and JavaScript.
 The current research CV is available at
 [`assets/Zhenhao_Liu_CV.pdf`](assets/Zhenhao_Liu_CV.pdf).
 
+The site also features Zhenhao Liu's first-author paper accepted to the NLPCC
+2026 Shared Tasks Poster, with the paper PDF at
+[`assets/RepDuet_NLPCC_2026.pdf`](assets/RepDuet_NLPCC_2026.pdf).
+
 ## Visual assets
 
 - Westlake University logo: official asset served by [westlake.edu.cn](https://www.westlake.edu.cn/images/header_icon_color.png).
