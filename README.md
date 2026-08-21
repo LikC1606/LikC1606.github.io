@@ -4,6 +4,9 @@ Personal academic website for [Zhenhao Liu](https://github.com/LikC1606), publis
 
 The site is a dependency-free static page built with HTML, CSS, and JavaScript.
 
+The current research CV is available at
+[`assets/Zhenhao_Liu_CV.pdf`](assets/Zhenhao_Liu_CV.pdf).
+
 ## Visual assets
 
 - Westlake University logo: official asset served by [westlake.edu.cn](https://www.westlake.edu.cn/images/header_icon_color.png).
