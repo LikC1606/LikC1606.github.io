@@ -674,8 +674,8 @@ button:focus-visible {
 
 .medal-summary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(110px, 1fr));
-  min-width: 280px;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  min-width: 390px;
   margin: 0;
   border-top: 1px solid var(--ink);
 }
@@ -711,7 +711,7 @@ button:focus-visible {
 }
 
 .honors-table .year-column { width: 10%; }
-.honors-table .result-column { width: 13%; }
+.honors-table .result-column { width: 19%; }
 .honors-table .record-column { width: 10%; }
 
 .honors-table th {
@@ -744,6 +744,7 @@ button:focus-visible {
 .honors-table time,
 .honors-table a { color: var(--muted); }
 .honors-table td > p { margin: 0 0 3px; color: var(--accent); }
+.honors-table sup { font-size: 0.65em; line-height: 0; }
 .honors-table h3 { margin: 0; font-size: 22px; font-weight: 570; }
 
 .award {
@@ -766,6 +767,8 @@ button:focus-visible {
 
 .award-gold { color: var(--gold); }
 .award-silver { color: var(--silver); }
+.award-trophy { color: var(--gold); }
+.record-empty { color: var(--muted); font-size: 13px; }
 
 .contact-section {
   display: grid;
@@ -836,6 +839,7 @@ button:focus-visible {
   .hero h1 { font-size: 64px; }
   .section-content { margin-left: 8%; }
   .honors-table { width: calc(100% - 8%); }
+  .honors-intro { grid-template-columns: 1fr; gap: 30px; }
   .about-content { grid-template-columns: 1fr; gap: 48px; }
   .research-list { grid-template-columns: 1fr; }
   .research-list li { min-height: auto; padding: 28px 0 31px; border-bottom: 1px solid var(--line); }
@@ -889,7 +893,6 @@ button:focus-visible {
   .hero-lead { font-size: 23px; }
   .academic-byline { grid-template-columns: 84px minmax(220px, 1fr) 200px; gap: 20px; padding: 18px; }
   .portrait img { width: 84px; height: 84px; }
-  .honors-intro { grid-template-columns: 1fr; gap: 30px; }
 }
 
 @media (max-width: 620px) {
@@ -946,7 +949,7 @@ button:focus-visible {
   .publication-entry > p:not(.publication-authors) { font-size: 18px; }
 
   .honors-intro > p:first-child { font-size: 20px; }
-  .medal-summary { width: 100%; min-width: 0; }
+  .medal-summary { width: 100%; min-width: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
   .honors-table { display: block; width: 100%; }
   .honors-table colgroup { display: none; }
@@ -963,7 +966,7 @@ button:focus-visible {
   .honors-table tbody { display: block; border-top: 1px solid var(--ink); }
   .honors-table tr {
     display: grid;
-    grid-template-columns: 48px minmax(0, 1fr) 66px;
+    grid-template-columns: 48px minmax(0, 1fr) 94px;
     gap: 12px;
     padding: 24px 0;
     border-bottom: 1px solid var(--line);
@@ -972,6 +975,7 @@ button:focus-visible {
   .honors-table tbody tr:hover td { background: transparent; }
   .honors-table tbody tr:hover td:first-child { box-shadow: none; }
   .honors-table td:last-child { grid-column: 2 / 4; }
+  .honors-table td.record-empty { display: none; }
   .honors-table h3 { font-size: 18px; }
 
   .contact-section { grid-template-columns: 1fr; gap: 30px; padding-top: 76px; padding-bottom: 76px; }
