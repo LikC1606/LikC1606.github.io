@@ -600,6 +600,78 @@ button:focus-visible {
   line-height: 1.55;
 }
 
+.collaborative-studies {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ink);
+}
+
+.collaboration-heading {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 24px;
+  align-items: baseline;
+}
+
+.collaboration-heading > p {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.collaboration-heading h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.collaboration-list {
+  margin: 24px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.collaboration-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px auto;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.collaboration-list li > div > p {
+  margin: 0 0 5px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.collaboration-list h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 590;
+  line-height: 1.35;
+}
+
+.contribution-role {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.collaboration-list a {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .publication-section { background: #faf9f5; }
 
 .publication-entry {
@@ -846,6 +918,7 @@ button:focus-visible {
   .research-list li + li { border-left: 0; }
   .research-list p { max-width: 640px; }
   .project-entry h3 { font-size: 28px; }
+  .collaboration-list li { grid-template-columns: minmax(0, 1fr) 160px auto; }
   .publication-entry h3 { font-size: 28px; }
 }
 
@@ -943,6 +1016,12 @@ button:focus-visible {
   .project-entry h3 { font-size: 26px; }
   .project-entry > p { font-size: 18px; }
   .project-contributions { grid-template-columns: 1fr; gap: 22px; }
+  .collaborative-studies { margin-top: 32px; padding-top: 26px; }
+  .collaboration-heading { grid-template-columns: 1fr; gap: 8px; }
+  .collaboration-heading h3 { font-size: 22px; }
+  .collaboration-list li { grid-template-columns: 1fr; gap: 9px; padding: 20px 0; }
+  .collaboration-list h4 { font-size: 18px; }
+  .collaboration-list a { justify-self: start; }
 
   .publication-entry { padding-top: 22px; }
   .publication-entry h3 { font-size: 26px; }
