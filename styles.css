@@ -268,8 +268,6 @@ button:focus-visible {
   aspect-ratio: 1;
   border-radius: 12px;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.05);
-  transition: filter 320ms ease;
 }
 
 .academic-byline {
@@ -886,7 +884,6 @@ button:focus-visible {
 .site-footer a:hover { color: #e38a6d; }
 
 @media (hover: hover) {
-  .academic-byline:hover .portrait img { filter: grayscale(0.25) contrast(1.02); }
   .academic-byline:hover .university-logo img { opacity: 1; }
   .campus-feature:hover img { filter: saturate(1) contrast(1.02); }
   .research-list li:hover::after { transform: scaleX(1); }
