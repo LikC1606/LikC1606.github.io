@@ -117,7 +117,7 @@ button:focus-visible {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 26px;
 }
 
 .site-nav a {
@@ -126,6 +126,7 @@ button:focus-visible {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -240,6 +241,8 @@ button:focus-visible {
 
 .hero-actions a span,
 .campus-feature figcaption a span,
+.opensource-intro a span,
+.opensource-link span,
 .honors-table a span,
 .contact-section div > a span,
 .site-footer a span {
@@ -249,6 +252,8 @@ button:focus-visible {
 
 .hero-actions a:hover span,
 .campus-feature figcaption a:hover span,
+.opensource-intro a:hover span,
+.opensource-link:hover span,
 .honors-table a:hover span,
 .contact-section div > a:hover span,
 .site-footer a:hover span { transform: translate(3px, -1px); }
@@ -376,7 +381,8 @@ button:focus-visible {
   scroll-margin-top: var(--header-height);
 }
 
-.research-section {
+.research-section,
+.opensource-section {
   width: 100%;
   max-width: none;
   padding-right: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
@@ -727,6 +733,102 @@ button:focus-visible {
 .publication-links a span { display: inline-block; transition: transform 180ms ease; }
 .publication-links a:hover span { transform: translate(3px, -1px); }
 
+.opensource-content { max-width: 980px; }
+
+.opensource-intro {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px 40px;
+  margin-bottom: 34px;
+}
+
+.opensource-intro > p {
+  max-width: 640px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.opensource-intro > a {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.opensource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 44px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+  list-style: none;
+}
+
+.opensource-grid li {
+  position: relative;
+  padding: 26px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.opensource-grid li::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms ease;
+}
+
+.opensource-item-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.opensource-meta {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.opensource-link {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.opensource-grid h3 {
+  margin: 12px 0 0;
+  font-size: 23px;
+  font-weight: 590;
+  line-height: 1.25;
+}
+
+.opensource-grid h3 a {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.opensource-grid li > p {
+  margin: 10px 0 0;
+  color: #3e3c39;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
 .honors-intro {
   display: grid;
   grid-template-columns: minmax(0, 640px) auto;
@@ -886,8 +988,10 @@ button:focus-visible {
 @media (hover: hover) {
   .academic-byline:hover .university-logo img { opacity: 1; }
   .campus-feature:hover img { filter: saturate(1) contrast(1.02); }
-  .research-list li:hover::after { transform: scaleX(1); }
-  .research-list li:hover h3 { color: var(--accent); }
+  .research-list li:hover::after,
+  .opensource-grid li:hover::after { transform: scaleX(1); }
+  .research-list li:hover h3,
+  .opensource-grid li:hover h3 a { color: var(--accent); }
 }
 
 .reveal-enabled .reveal-item {
@@ -901,6 +1005,10 @@ button:focus-visible {
 .reveal-enabled .reveal-item.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1020px) {
+  .site-nav { gap: 18px; }
 }
 
 @media (max-width: 940px) {
@@ -917,6 +1025,8 @@ button:focus-visible {
   .project-entry h3 { font-size: 28px; }
   .collaboration-list li { grid-template-columns: minmax(0, 1fr) 160px auto; }
   .publication-entry h3 { font-size: 28px; }
+  .opensource-intro { flex-direction: column; gap: 14px; }
+  .opensource-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 840px) {
@@ -1023,6 +1133,12 @@ button:focus-visible {
   .publication-entry { padding-top: 22px; }
   .publication-entry h3 { font-size: 26px; }
   .publication-entry > p:not(.publication-authors) { font-size: 18px; }
+
+  .opensource-intro { margin-bottom: 24px; }
+  .opensource-intro > p { font-size: 19px; }
+  .opensource-grid li { padding: 22px 0 24px; }
+  .opensource-grid h3 { font-size: 20px; }
+  .opensource-grid li > p { font-size: 17px; }
 
   .honors-intro > p:first-child { font-size: 20px; }
   .medal-summary { width: 100%; min-width: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
