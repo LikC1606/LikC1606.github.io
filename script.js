@@ -67,7 +67,7 @@ sections.forEach((section) => observer.observe(section));
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealItems = [...document.querySelectorAll(
-  ".hero-copy, .academic-byline, .campus-feature, .section-header, .section-content, .contact-section",
+  ".hero-copy, .hero-aside, .campus-feature, .section-header, .section-content, .contact-section",
 )];
 
 if (!prefersReducedMotion && "IntersectionObserver" in window) {
