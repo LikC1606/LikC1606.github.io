@@ -477,18 +477,24 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 12px;
+  padding: 4px 11px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 650;
   text-decoration: none;
   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
+.inline-chip-pdf {
+  border-color: rgba(193, 95, 60, 0.42);
+  background: rgba(193, 95, 60, 0.06);
+  color: var(--accent-deep);
+}
+
 .inline-chip:hover {
   border-color: var(--accent);
-  background: rgba(193, 95, 60, 0.05);
+  background: rgba(193, 95, 60, 0.12);
   color: var(--accent-deep);
 }
 
@@ -622,6 +628,26 @@ button:focus-visible {
 }
 
 .publication-coauthored { margin-top: 22px; }
+
+.publication-coauthored li {
+  grid-template-columns: 1fr;
+  padding: 16px 12px;
+}
+
+.item-note {
+  margin: 5px 0 0;
+  color: var(--body-ink);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.item-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 11px;
+}
 
 .compact-list li {
   display: grid;
