@@ -32,7 +32,7 @@ document.addEventListener("pointerdown", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 840) closeMenu();
+  if (window.innerWidth > 780) closeMenu();
   updateScroll();
 });
 
