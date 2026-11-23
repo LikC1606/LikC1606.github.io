@@ -744,9 +744,9 @@ button:focus-visible {
   width: 100%;
   max-width: none;
   padding-top: 52px;
-  padding-right: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
+  padding-right: max(var(--page-pad), calc((100% - var(--content-max)) / 2 + var(--page-pad)));
   padding-bottom: 52px;
-  padding-left: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
+  padding-left: max(var(--page-pad), calc((100% - var(--content-max)) / 2 + var(--page-pad)));
   background: var(--ink);
   color: var(--paper);
   box-shadow: inset 0 3px 0 var(--accent);
@@ -786,9 +786,9 @@ button:focus-visible {
   width: 100%;
   max-width: none;
   padding-top: 20px;
-  padding-right: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
+  padding-right: max(var(--page-pad), calc((100% - var(--content-max)) / 2 + var(--page-pad)));
   padding-bottom: 24px;
-  padding-left: max(var(--page-pad), calc((100vw - var(--content-max)) / 2 + var(--page-pad)));
+  padding-left: max(var(--page-pad), calc((100% - var(--content-max)) / 2 + var(--page-pad)));
   border-top: 1px solid #383735;
   background: var(--ink);
   color: #99958e;
