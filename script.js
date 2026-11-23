@@ -61,7 +61,7 @@ const observer = new IntersectionObserver((entries) => {
       else link.removeAttribute("aria-current");
     });
   });
-}, { rootMargin: "-28% 0px -62% 0px" });
+}, { rootMargin: "-25% 0px -65% 0px" });
 
 sections.forEach((section) => observer.observe(section));
 
@@ -74,15 +74,27 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("reveal-item"));
   document.documentElement.classList.add("reveal-enabled");
 
+  const revealVisibleNow = () => {
+    const viewLimit = window.innerHeight + 120;
+    revealItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top <= viewLimit) {
+        item.classList.add("is-visible");
+      }
+    });
+  };
+
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("is-visible");
       revealObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
+  }, { threshold: 0.01, rootMargin: "0px 0px 100px 0px" });
 
   revealItems.forEach((item) => revealObserver.observe(item));
+  revealVisibleNow();
+  window.addEventListener("hashchange", () => requestAnimationFrame(revealVisibleNow));
 }
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
