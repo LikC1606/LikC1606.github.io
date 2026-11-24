@@ -1,20 +1,23 @@
-<!-- README_SYNC: source=889133f43b448e987c73ae75b9f83702c5ba1147; updated=2026-11-18 -->
-
-[English](./README.md) · 简体中文
+<!-- README_SYNC: source=889133f43b448e987c73ae75b9f83702c5ba1147; updated=2026-11-24 -->
+<p align="center"><a href="./README.md" lang="en">English</a> · 简体中文</p>
 
 # Zhenhao Liu 的学术主页
 
-[线上主页](https://likc1606.github.io/)汇集 Zhenhao Liu 的研究、项目、论文和部分获奖记录。本仓库是 GitHub Pages 的静态站点源码，使用原生 HTML、CSS 和 JavaScript，无需安装依赖或编译。
+[**likc1606.github.io**](https://likc1606.github.io/) 个人学术主页源码（西湖大学 · [WestlakeNLP 实验室](https://westlakenlp.com/)）。采用原生 HTML、CSS 与 JavaScript 构建，通过 GitHub Pages 直接静态部署。
 
-[访问主页](https://likc1606.github.io/) · [Star 收藏源码](https://github.com/LikC1606/LikC1606.github.io/stargazers)
+<a href="https://github.com/LikC1606/LikC1606.github.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LikC1606/LikC1606.github.io"></a>
+<a href="https://github.com/LikC1606/LikC1606.github.io/actions/workflows/pages/pages-build-deployment"><img alt="GitHub Pages" src="https://github.com/LikC1606/LikC1606.github.io/actions/workflows/pages/pages-build-deployment/badge.svg"></a>
+<a href="https://likc1606.github.io/"><img alt="Live website" src="https://img.shields.io/badge/site-likc1606.github.io-1e3a5f"></a>
 
-## 研究资料
+[访问线上主页](https://likc1606.github.io/) · [查看单页简历 PDF](./assets/Zhenhao_Liu_CV.pdf)
 
-- [科研简历](./assets/Zhenhao_Liu_CV.pdf)
-- [RepDuet 论文](./assets/RepDuet_NLPCC_2026.pdf)：一作研究，围绕 Chinese BabyLM 认知赛道的任务专用混合表征，获 NLPCC 2026 Shared Tasks 海报接收。
-- [RepDuet 模型与推理代码](https://huggingface.co/LikC1606/chinese-babylm-cog-a197-strict-best)
+## 研究资料与代表工作
 
-其他项目和论文入口见线上主页。
+- **科研简历：** [Zhenhao_Liu_CV.pdf](./assets/Zhenhao_Liu_CV.pdf)
+- **NLPCC 2026 Shared Tasks（独立一作 · 认知赛道第一名）：** [RepDuet 论文](./assets/RepDuet_NLPCC_2026.pdf) · [模型与推理代码](https://huggingface.co/LikC1606/chinese-babylm-cog-a197-strict-best)
+- **EMNLP 2026 Main：** *How Far Are AI Scientists from Changing the World? A Survey of Autonomous Scientific Discovery* — [PDF](https://aclanthology.org/2026.emnlp-main.1285.pdf) · [ACL Anthology](https://aclanthology.org/2026.emnlp-main.1285/)
+- **EMNLP 2026 Main：** *From AI Reviewers to Evidence Assistants: Quantifying the Human-AI Responsibility Boundary in Peer Review* — [PDF](https://aclanthology.org/2026.emnlp-main.1296.pdf) · [ACL Anthology](https://aclanthology.org/2026.emnlp-main.1296/)
+- **代表开源项目：** [TheoremOS](https://github.com/HuggingMath/TheoremOS)（[theoremos.top](https://theoremos.top/)）——由 [WestlakeNLP 实验室](https://westlakenlp.com/)研发的 Lean 4 协同定理证明工作台
 
 ## 本地预览与维护
 
